@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+ background-image:linear-gradient(lightskyblue, royalblue);
+ background-repeat:no-repeat;
+ background-size:cover;
+ }
+ .container{
+    width:80%;
+    margin:30px auto;
+    padding:20px;
+    border-radius:10px;
+    background-color:white;
+    text-align:center;
+ }
+ button{
+    background-color:lightskyblue;
+    padding:5px 10px;
+    font-weight:bold;
+    border:none;
+    border-radius:10px;
+ }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <h1>Multiplication Table</h1>
+                <input type="number" id="num" placeholder="Enter a number">
+ <button onclick="multiplicationTable()">Generate Table</button>
+            <div id="result">
+                </div>
+            </div>
+            <script>
+                function multiplicationTable(){
+         let numInput = document.getElementById("num").value;
+
+            document.getElementById("result").innerHTML = "";
+
+                        if(num === ""){
+                            alert("Please Enter A Number");
+                            return;
+                        }
+
+        let table = `
+            <h2>Multiplication Table For ${numInput}</h2>
+        `;
+
+                        for(let i = 1: i < 11; i++){
+                                table += `
+                          ${numInput} x ${i} = ${numInput * i}
+                          <br>
+                                `;
+                        }
+
+         document.getElementById("result").innerHTML = table;
+                }              
+            </body>
+    </html>
